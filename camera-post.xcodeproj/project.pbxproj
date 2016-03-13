@@ -14,6 +14,10 @@
 		112191921C94EA860060B654 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 112191901C94EA860060B654 /* LaunchScreen.storyboard */; };
 		1121919D1C94EA860060B654 /* camera_postTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1121919C1C94EA860060B654 /* camera_postTests.swift */; };
 		112191A81C94EA860060B654 /* camera_postUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112191A71C94EA860060B654 /* camera_postUITests.swift */; };
+		112191B71C94EAD60060B654 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112191B61C94EAD60060B654 /* Post.swift */; };
+		112191BA1C94F00E0060B654 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112191B91C94F00E0060B654 /* PostCell.swift */; };
+		114CC6021C94F3F70000BB9C /* AddPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CC6011C94F3F70000BB9C /* AddPostVC.swift */; };
+		1164AD441C94FB5300A766A3 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1164AD431C94FB5300A766A3 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		112191A31C94EA860060B654 /* camera-postUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "camera-postUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		112191A71C94EA860060B654 /* camera_postUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = camera_postUITests.swift; sourceTree = "<group>"; };
 		112191A91C94EA860060B654 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		112191B61C94EAD60060B654 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		112191B91C94F00E0060B654 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		114CC6011C94F3F70000BB9C /* AddPostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostVC.swift; sourceTree = "<group>"; };
+		1164AD431C94FB5300A766A3 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +105,12 @@
 		112191861C94EA860060B654 /* camera-post */ = {
 			isa = PBXGroup;
 			children = (
+				1164AD421C94FB4500A766A3 /* Services */,
+				112191B51C94EAC30060B654 /* Model */,
+				112191B81C94EFE80060B654 /* View */,
+				114CC6001C94F36C0000BB9C /* Controller */,
 				112191871C94EA860060B654 /* AppDelegate.swift */,
-				112191891C94EA860060B654 /* ViewController.swift */,
-				1121918B1C94EA860060B654 /* Main.storyboard */,
 				1121918E1C94EA860060B654 /* Assets.xcassets */,
-				112191901C94EA860060B654 /* LaunchScreen.storyboard */,
 				112191931C94EA860060B654 /* Info.plist */,
 			);
 			path = "camera-post";
@@ -123,6 +132,41 @@
 				112191A91C94EA860060B654 /* Info.plist */,
 			);
 			path = "camera-postUITests";
+			sourceTree = "<group>";
+		};
+		112191B51C94EAC30060B654 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				112191B61C94EAD60060B654 /* Post.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		112191B81C94EFE80060B654 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1121918B1C94EA860060B654 /* Main.storyboard */,
+				112191901C94EA860060B654 /* LaunchScreen.storyboard */,
+				112191B91C94F00E0060B654 /* PostCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		114CC6001C94F36C0000BB9C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				112191891C94EA860060B654 /* ViewController.swift */,
+				114CC6011C94F3F70000BB9C /* AddPostVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		1164AD421C94FB4500A766A3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1164AD431C94FB5300A766A3 /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +300,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				112191B71C94EAD60060B654 /* Post.swift in Sources */,
 				1121918A1C94EA860060B654 /* ViewController.swift in Sources */,
+				114CC6021C94F3F70000BB9C /* AddPostVC.swift in Sources */,
+				1164AD441C94FB5300A766A3 /* DataService.swift in Sources */,
 				112191881C94EA860060B654 /* AppDelegate.swift in Sources */,
+				112191BA1C94F00E0060B654 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +449,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nikitabuyevich.camera-post";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -412,6 +461,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nikitabuyevich.camera-post";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -482,6 +532,7 @@
 				112191AE1C94EA860060B654 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		112191AF1C94EA860060B654 /* Build configuration list for PBXNativeTarget "camera-postTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +541,7 @@
 				112191B11C94EA860060B654 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		112191B21C94EA860060B654 /* Build configuration list for PBXNativeTarget "camera-postUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +550,7 @@
 				112191B41C94EA860060B654 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
