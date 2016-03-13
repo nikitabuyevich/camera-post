@@ -4,5 +4,5 @@
 
 * OOP Architecture
 * MVC Architecture
-* NSUser Defaults saving architecture
-* Table views
+* NSUser Defaults saving to your phone locally.
+* Table Views
